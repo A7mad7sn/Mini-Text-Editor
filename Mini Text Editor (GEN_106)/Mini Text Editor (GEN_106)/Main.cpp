@@ -9,9 +9,9 @@ void ULintro(file f);
 void FAintro(file f);
 void FARintro(file f);
 //Main Function !!
-void main()
+int main()
 {
-	file f ;
+	file f;
 	string s1, s2;
 	cout << "*****Welcome To Our Mini Text Editor*****" << endl;
 	cout << "Please Add two Lines : " << endl;
@@ -38,7 +38,7 @@ void main()
 		cin >> Option;
 		if (Option < 1 || Option > 7) {
 			cout << "invalid Option , Program will exit..." << endl;
-			return ;
+			return 0;
 		}
 		cout << "-------------------------------------------------------" << endl;
 		switch (Option)
@@ -65,7 +65,7 @@ void main()
 			break;
 		}
 	}
-	return ;
+	return 0;
 }
 //Helper Functions !!
 void ALintro(file f)
@@ -82,28 +82,28 @@ void ILintro(file f)
 	cout << "Please Enter The line You want to Insert !" << endl;
 	string newline;
 	cin >> newline;
-	cout << "Please Enter The Row Num You want to Insert in ! (Allowed from 1 to " + f.lines.size();
+	cout << "Please Enter The Row Num You want to Insert in ! (Allowed from 1 to " + f.GetLinesProps().size();
 	cout << ")" << endl;
-	int i;
-	cin >> i;
-	i = i - 1;
-	f.InsertLine(i, newline);
+	int j;
+	cin >> j;
+	j = j - 1;
+	f.InsertLine(j, newline);
 }
 void DLintro(file f)
 {
 	cout << "*_ Deleting Line is Chosen _*" << endl;
 	cout << "Please Enter The Row Num You want to delete !" << endl;
-	int i;
-	cin >> i;
-	f.DeleteLine(i);
+	int j;
+	cin >> j;
+	f.DeleteLine(j);
 }
 void GLTintro(file f)
 {
 	cout << "*_ Getting Line is Chosen _*" << endl;
 	cout << "Please Enter The Row Num You want to Get !" << endl;
-	int i;
-	cin >> i;
-	cout << f.GetLineText(i);
+	int j;
+	cin >> j;
+	cout << f.GetLineText(j);
 }
 void ULintro(file f)
 {
@@ -111,11 +111,11 @@ void ULintro(file f)
 	cout << "Please Enter The line You want to Insert !" << endl;
 	string newline;
 	cin >> newline;
-	cout << "Please Enter The Row Num You want to Update in ! (Allowed from 1 to " + f.lines.size();
+	cout << "Please Enter The Row Num You want to Update in ! (Allowed from 1 to " + f.GetLinesProps().size();
 	cout << ")" << endl;
-	int i;
-	cin >> i;
-	f.UpdateLine(i, newline);
+	int j;
+	cin >> j;
+	f.UpdateLine(j, newline);
 }
 void FAintro(file f)
 {
@@ -128,11 +128,11 @@ void FAintro(file f)
 void FARintro(file f)
 {
 	cout << "*_ Find and Replace is Chosen _*" << endl;
-	string newstring;
-	string oldstring;
+	string newword;
+	string oldword;
 	cout << "Enter a String You want to Insert : ";
-	cin >> newstring;
+	cin >> newword;
 	cout << "Enter a String You want to be Replaced : ";
-	cin >> oldstring;
-	f.Findandreplace(newstring, oldstring);
+	cin >> oldword;
+	f.Findandreplace(newword, oldword);
 }
