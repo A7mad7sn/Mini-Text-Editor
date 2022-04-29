@@ -5,14 +5,16 @@ using namespace std;
 
 class file {
 	vector<string> lines;
-public : 
+public:
 	file();
+	vector<string> GetLinesProps();
 	void AddLine(string l);
 	void InsertLine(int i, string l);
-	string GetLineText(int i);
 	void DeleteLine(int i);
+	string GetLineText(int i);
 	void UpdateLine(int i, string l);
-	void FindAll();
-	void Show();
+	void FindAll(string s);
 	void Findandreplace(string s1, string s2);
+	void Show();
+	
 };
