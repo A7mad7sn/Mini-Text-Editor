@@ -62,6 +62,11 @@ void file::Findandreplace(string s1, string s2)
 
 void file::Show()
 {
+	for (int i = 0; i < lines.size(); i++) 
+	{
+		cout << lines.at(i) << endl;
+	}
+	cout << endl;
 }
 
 
