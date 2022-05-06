@@ -3,15 +3,16 @@
 using namespace std;
 
 
-vector<string> file::GetLinesProps()
-{
-	return lines;
+int file::GetSize()
+{ 
+	int s = lines.size();
+	return s;
 }
 
 
 void file::AddLine(string l)
 { 
-	
+	lines.push_back(l);
 }
 
 void file::InsertLine(int i, string l)
@@ -30,7 +31,7 @@ void file::DeleteLine(int i)
 	{
 		if (i >= 1 && i <= lines.size())
 		{
-			for (it = lines.begin() + i - 1; it <= lines.end() - 1; it++)
+			for (it = lines.begin() + i - 1; it < lines.end() - 1; it++)
 			{
 				*it = *(it + 1);
 			}
@@ -46,6 +47,7 @@ void file::DeleteLine(int i)
 	{
 		cout << "Text File is empty";
 	}
+	cout << endl;
 }
 
 void file::UpdateLine(int i, string l)
@@ -64,9 +66,8 @@ void file::Show()
 {
 	for (int i = 0; i < lines.size(); i++) 
 	{
-		cout << lines.at(i) << endl;
+		cout << "          " << lines.at(i) << endl;
 	}
-	cout << endl;
 }
 
 

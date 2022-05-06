@@ -1,11 +1,12 @@
-#pragma once
+#include <iostream>
+#include "assert.h"
 #include <string>
 #include <vector>
 using namespace std;
 class file{
 	vector<string> lines;
 public:
-	vector<string> GetLinesProps();
+	int GetSize();
 	void AddLine(string l);
 	void InsertLine(int i, string l);
 	void DeleteLine(int i);
