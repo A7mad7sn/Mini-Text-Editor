@@ -1,4 +1,7 @@
 #include "Text File.h"
+#include <fstream>
+//hh is just an temp value to solve input case to avoid reading empty string !!
+string hh;
 //Declaration of Helper Functions !!
 void ALintro(file &f);
 void ILintro(file &f);
@@ -12,17 +15,59 @@ void Showintro(file &f);
 void main()
 {
 	file f;
-	string s1, s2;
-	cout << "*****Welcome To Our Mini Text Editor*****" << endl;
-	cout << "Please Add two Lines : " << endl;
-	cout << "Line 1 : ";
-	cin >> s1;
-	cout << "Line 2 : ";
-	cin >> s2;
-	f.AddLine(s1);
-	f.AddLine(s2);
-	Showintro(f);
-	while (true)
+	ofstream myfile;
+	int fOption;
+	cout << "\t\t\t\t\t*****Welcome To Our Mini Text Editor*****" << endl;
+	cout << "Please Select : " << endl;
+	cout << "---------------" << endl;
+	cout << "  1 --> Create a New Text File." << endl;
+	cout << "  2 --> Open An Exsisting File & Edit it." << endl;
+	cout << "Option ==> ";
+	cin >> fOption;
+	string directory;
+	if (fOption == 1) {
+		cout << "--------------------------------------------------------------------" << endl;
+		cout << "Please Name Your Text file : ";
+		string name;
+		cin >> name;
+		directory = "Data/" + name + ".txt";
+		myfile.open(directory);
+		cout << "Please Add two Lines : " << endl;
+		string s1, s2;
+		getline(cin, hh);
+		cout << "Line 1 : ";
+		getline(cin, s1);
+		cout << "Line 2 : ";
+		getline(cin, s2);
+		f.AddLine(s1);
+		f.AddLine(s2);
+		Showintro(f);
+	}
+	else if (fOption == 2) {
+		cout << "--------------------------------------------------------------------" << endl;
+		cout << "Please Enter Your Existing File Name : ";
+		getline(cin, hh);
+		string name;
+		getline(cin, name);
+		directory = "Data/" + name + ".txt";
+		ifstream ifile(directory);
+		myfile.open(directory,ios :: app);
+		if (ifile.fail()) {
+			cout << "This File doesn't exist , Program will exit..." << endl;
+			return;
+		}
+		string l;
+		while (getline(ifile, l)) {
+			f.AddLine(l);
+		}
+		Showintro(f);
+	}
+	else {
+		cout << "invalid Option , Program will exit..." << endl;
+		return;
+	}
+	bool continuity = true;
+	while (continuity)
 	{
 		cout << "Press : " << endl;
 		cout << "-------" << endl;
@@ -52,9 +97,14 @@ void main()
 		case(5): ULintro(f); break;
 		case(6): FAintro(f); break;
 		case(7): FARintro(f); break;
-		case(8): return;
+		case(8): continuity = false; break;
 		default: break;
 		}
+		myfile.open(directory, ios::out);
+		for (int i = 0; i < f.GetSize(); i++) {
+			myfile << f.GetLineText(i) << endl;
+		}
+		myfile.close();
 		Showintro(f);
 	}
 	return;
@@ -64,17 +114,20 @@ void ALintro(file &f)
 {
 	cout << "*_ Adding Line is Chosen _*" << endl;
 	cout << "Please Enter The line You want to Add !" << endl;
+	getline(cin, hh);
 	cout << "New Line ==> ";
 	string newline;
-	cin >> newline;
+	getline(cin, newline);
 	f.AddLine(newline);
 }
 void ILintro(file &f)
 {
 	cout << "*_ Inserting Line is Chosen _*" << endl;
 	cout << "Please Enter The line You want to Insert !" << endl;
+	getline(cin,hh);
+	cout << "New Line ==> ";
 	string newline;
-	cin >> newline;
+	getline(cin, newline);
 	cout << "Please Enter The Row Num You want to Insert in ! (Allowed from 1 to " << f.GetSize();
 	cout << ")" << endl;
 	int j;
@@ -107,8 +160,9 @@ void ULintro(file &f)
 	int j;
 	cin >> j;
 	cout << "Please Enter The line You want to Insert !" << endl;
+	cout << "New Line ==> ";
 	string newline;
-	cin >> newline;
+	getline(cin, newline);
 	f.UpdateLine(j, newline);
 }
 void FAintro(file &f)

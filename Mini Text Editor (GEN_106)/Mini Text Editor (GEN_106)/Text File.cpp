@@ -3,6 +3,7 @@
 using namespace std;
 
 
+
 int file::GetSize()
 { 
 	int s = lines.size();
