@@ -1,8 +1,10 @@
 #include "Text File.h"
 #include <fstream>
-//hh is just an temp value to solve input case to avoid reading empty string !!
-string hh;
+//Globals :
+int Counter = 0;
+string hh;//hh is just an temp value to solve input case to avoid reading empty string !!
 //Declaration of Helper Functions !!
+
 void ALintro(file &f);
 void ILintro(file &f);
 void DLintro(file &f);
@@ -11,63 +13,37 @@ void ULintro(file &f);
 void FAintro(file &f);
 void FARintro(file &f);
 void Showintro(file &f);
+void DataSaving(ofstream &myfile, string &directory, file &f);
+void Creating_New_Text_File_Interface(ofstream &myfile, string &directory, file &f);
+void Reading_Existing_Text_File_Inteface(ofstream &myfile, string &directory, file &f);
 //Main Function !!
 void main()
 {
 	file f;
 	ofstream myfile;
-	int fOption;
-	cout << "\t\t\t\t\t*****Welcome To Our Mini Text Editor*****" << endl;
+	string directory;
+	if (Counter == 0)
+	{
+		cout << "\t\t\t\t\t*****Welcome To Our Mini Text Editor*****" << endl;
+	}
+	Counter++;
 	cout << "Please Select : " << endl;
 	cout << "---------------" << endl;
 	cout << "  1 --> Create a New Text File." << endl;
 	cout << "  2 --> Open An Exsisting File & Edit it." << endl;
+	cout << "  3 --> Exit Mini Text Editor." << endl;
 	cout << "Option ==> ";
+	int fOption;
 	cin >> fOption;
-	string directory;
-	if (fOption == 1) {
-		cout << "--------------------------------------------------------------------" << endl;
-		cout << "Please Name Your Text file : ";
-		string name;
-		cin >> name;
-		directory = "Data/" + name + ".txt";
-		myfile.open(directory);
-		cout << "Please Add two Lines : " << endl;
-		string s1, s2;
-		getline(cin, hh);
-		cout << "Line 1 : ";
-		getline(cin, s1);
-		cout << "Line 2 : ";
-		getline(cin, s2);
-		f.AddLine(s1);
-		f.AddLine(s2);
-		Showintro(f);
+	switch (fOption) 
+	{
+	case(1): Creating_New_Text_File_Interface(myfile, directory, f); break;
+	case(2): Reading_Existing_Text_File_Inteface(myfile, directory, f); break;
+	case(3): return;
+	default: cout << "invalid Option , Program will exit..." << endl;
+		     return;
 	}
-	else if (fOption == 2) {
-		cout << "--------------------------------------------------------------------" << endl;
-		cout << "Please Enter Your Existing File Name : ";
-		getline(cin, hh);
-		string name;
-		getline(cin, name);
-		directory = "Data/" + name + ".txt";
-		ifstream ifile(directory);
-		myfile.open(directory,ios :: app);
-		if (ifile.fail()) {
-			cout << "This File doesn't exist , Program will exit..." << endl;
-			return;
-		}
-		string l;
-		while (getline(ifile, l)) {
-			f.AddLine(l);
-		}
-		Showintro(f);
-	}
-	else {
-		cout << "invalid Option , Program will exit..." << endl;
-		return;
-	}
-	bool continuity = true;
-	while (continuity)
+	while (true)
 	{
 		cout << "Press : " << endl;
 		cout << "-------" << endl;
@@ -78,15 +54,12 @@ void main()
 		cout << "  5 --> Update line with another line." << endl;;
 		cout << "  6 --> Find lines contains a specific string." << endl;
 		cout << "  7 --> Replace a string with another one in all lines." << endl;
-		cout << "  8 --> Exit Mini Text Editor." << endl;
+		cout << "  8 --> Edit another Text File." << endl;
+		cout << "  9 --> Exit Mini Text Editor." << endl;
 		cout << endl;
 		cout << "Option ====> : ";
 		int Option;
 		cin >> Option;
-		if (Option < 1 || Option > 8) {
-			cout << "invalid Option , Program will exit..." << endl;
-			return;
-		}
 		cout << "--------------------------------------------------------------------" << endl;
 		switch (Option)
 		{
@@ -97,14 +70,12 @@ void main()
 		case(5): ULintro(f); break;
 		case(6): FAintro(f); break;
 		case(7): FARintro(f); break;
-		case(8): continuity = false; break;
-		default: break;
+		case(8): DataSaving(myfile, directory, f); main();
+		case(9): DataSaving(myfile, directory, f); return;
+		default: cout << "invalid Option , Program will exit..." << endl;
+			     return;
 		}
-		myfile.open(directory, ios::out);
-		for (int i = 0; i < f.GetSize(); i++) {
-			myfile << f.GetLineText(i) << endl;
-		}
-		myfile.close();
+		DataSaving(myfile, directory, f);
 		Showintro(f);
 	}
 	return;
@@ -159,8 +130,10 @@ void ULintro(file &f)
 	cout << ")" << endl;
 	int j;
 	cin >> j;
+	j--;
 	cout << "Please Enter The line You want to Insert !" << endl;
 	cout << "New Line ==> ";
+	getline(cin, hh);
 	string newline;
 	getline(cin, newline);
 	f.UpdateLine(j, newline);
@@ -191,4 +164,49 @@ void Showintro(file &f)
 	cout << "----------------------------------------" << endl;;
 	f.Show();
 	cout << "--------------------------------------------------------------------" << endl;
+}
+void DataSaving(ofstream &myfile,string &directory,file &f) {
+	myfile.open(directory, ios::out);
+	for (int i = 0; i < f.GetSize(); i++) {
+		myfile << f.GetLineText(i) << endl;
+	}
+	myfile.close();
+}
+void Creating_New_Text_File_Interface(ofstream &myfile, string &directory, file &f)
+{
+	cout << "--------------------------------------------------------------------" << endl;
+	cout << "Please Name Your Text file : ";
+	string name;
+	cin >> name;
+	directory = "Data/" + name + ".txt";
+	cout << "Please Add two Lines : " << endl;
+	string s1, s2;
+	getline(cin, hh);
+	cout << "Line 1 : ";
+	getline(cin, s1);
+	cout << "Line 2 : ";
+	getline(cin, s2);
+	f.AddLine(s1);
+	f.AddLine(s2);
+	Showintro(f);
+}
+void Reading_Existing_Text_File_Inteface(ofstream &myfile, string &directory, file &f) 
+{
+	cout << "--------------------------------------------------------------------" << endl;
+	cout << "Please Enter Your Existing File Name : ";
+	getline(cin, hh);
+	string name;
+	getline(cin, name);
+	directory = "Data/" + name + ".txt";
+	ifstream ifile(directory);
+	myfile.open(directory,ios::app);
+	if (ifile.fail()) {
+		cout << "This File doesn't exist , Program will exit..." << endl;
+		return;
+	}
+	string l;
+	while (getline(ifile, l)) {
+		f.AddLine(l);
+	}
+	Showintro(f);
 }
