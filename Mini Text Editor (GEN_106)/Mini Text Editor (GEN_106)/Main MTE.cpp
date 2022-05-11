@@ -25,8 +25,8 @@ void main()
 	if (Counter == 0)
 	{
 		cout << "\t\t\t\t\t*****Welcome To Our Mini Text Editor*****" << endl;
+		Counter++;
 	}
-	Counter++;
 	cout << "Please Select : " << endl;
 	cout << "---------------" << endl;
 	cout << "  1 --> Create a New Text File." << endl;
