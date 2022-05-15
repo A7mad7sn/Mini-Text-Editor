@@ -2,7 +2,6 @@
 #include "assert.h"
 #include <string>
 #include <vector>
-#include <stack>
 using namespace std;
 class file{
 	vector<string> lines;
