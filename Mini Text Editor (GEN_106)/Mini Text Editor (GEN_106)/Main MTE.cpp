@@ -70,13 +70,13 @@ int main()
 		cout << "--------------------------------------------------------------------" << endl;
 		switch (Option)
 		{
-		case(1): ALintro(f); break;
-		case(2): ILintro(f); break;
-		case(3): DLintro(f); break;
-		case(4): GLTintro(f); break;
-		case(5): ULintro(f); break;
-		case(6): FAintro(f); break;
-		case(7): FARintro(f); break;
+		case(1): ALintro(f); DataSaving(myfile, directory, f); break;
+		case(2): ILintro(f); DataSaving(myfile, directory, f); break;
+		case(3): DLintro(f); DataSaving(myfile, directory, f); break;
+		case(4): GLTintro(f); DataSaving(myfile, directory, f); break;
+		case(5): ULintro(f); DataSaving(myfile, directory, f); break;
+		case(6): FAintro(f); DataSaving(myfile, directory, f); break;
+		case(7): FARintro(f); DataSaving(myfile, directory, f); break;
 		case(8): DataSaving(myfile, directory, f); main();
 		case(9): DataSaving(myfile, directory, f); return 0;
 		default: DataSaving(myfile, directory, f); 
@@ -138,6 +138,7 @@ void DLintro(file &f)
 		else
 			break;
 	}
+	j--;
 	f.DeleteLine(j);
 }
 
