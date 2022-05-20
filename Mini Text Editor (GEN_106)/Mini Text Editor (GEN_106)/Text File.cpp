@@ -6,8 +6,7 @@ using namespace std;
 
 int file::GetSize()
 { 
-	int s = lines.size();
-	return s;
+	return lines.size();
 }
 
 
@@ -18,9 +17,11 @@ void file::AddLine(string l)
 
 void file::InsertLine(int i, string l)
 {
-	if (i < lines.size())
-		lines[i] = l;
-	else {
+	if (i < lines.size()) {
+		vector<string>::iterator it;
+		lines.emplace(lines.begin() + i, l);
+	}
+	else{
 		lines.resize(i+1 , " ");
 		lines[i] = l;
 	}
@@ -94,10 +95,19 @@ void file::Findandreplace(string s1, string s2)
 
 void file::Show()
 {
+	//WARNING : This Function work Correctly , but it isn't implemented as required
 	for (int i = 0; i < lines.size(); i++) 
 	{
 		cout << "          " << lines.at(i) << endl;
 	}
 }
 
+void file::Undo()
+{
 
+}
+
+void file::Redo()
+{
+
+}

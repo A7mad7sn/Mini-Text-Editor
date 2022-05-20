@@ -15,5 +15,7 @@ public:
 	void FindAll(string s);
 	void Findandreplace(string s1, string s2);
 	void Show();
+	void Undo();
+	void Redo();
 	
 };
