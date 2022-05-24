@@ -1,10 +1,10 @@
 #include <iostream>
-#include "assert.h"
 #include <string>
-#include <vector>
+#include <deque>
+
 using namespace std;
 class file{
-	vector<string> lines;
+	deque<string> lines;
 public:
 	int GetSize();
 	void AddLine(string l);
@@ -12,7 +12,7 @@ public:
 	void DeleteLine(int i);
 	string GetLineText(int i);
 	void UpdateLine(int i, string l);
-	void FindAll(string s);
+	deque<int> FindAll(string s);
 	void Findandreplace(string s1, string s2);
 	void Show();
 	void Undo();

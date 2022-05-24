@@ -5,18 +5,18 @@
 int Counter = 0;
 string hh;//hh is just an temp value to solve input case to avoid reading empty string !!
 //Declaration of Helper Functions !!
-void ALintro(file &f);
-void ILintro(file &f);
-void DLintro(file &f);
-void GLTintro(file &f);
-void ULintro(file &f);
-void FAintro(file &f);
-void FARintro(file &f);
-void Showintro(file &f);
-bool CheckIndex(int i, file &f);
-void DataSaving(ofstream &myfile, string &directory, file &f);
-void Creating_New_Text_File_Interface(ofstream &myfile, string &directory, file &f);
-void Reading_Existing_Text_File_Inteface(ofstream &myfile, string &directory, file &f);
+void ALintro(file& f);
+void ILintro(file& f);
+void DLintro(file& f);
+void GLTintro(file& f);
+void ULintro(file& f);
+void FAintro(file& f);
+void FARintro(file& f);
+void Showintro(file& f);
+bool CheckIndex(int i, file& f);
+void DataSaving(ofstream& myfile, string& directory, file& f);
+void Creating_New_Text_File_Interface(ofstream& myfile, string& directory, file& f);
+void Reading_Existing_Text_File_Inteface(ofstream& myfile, string& directory, file& f);
 //Main Function !!
 int main()
 {
@@ -45,9 +45,9 @@ int main()
 		case(2): Reading_Existing_Text_File_Inteface(myfile, directory, f); Continuity = false; break;
 		case(3): return 0;
 		default: cout << "--------------------------------------------------------------------" << endl;
-				 cout << fOption <<" is invalid Option , Please try again ! (Allowed from 1 to 3)" << endl;
-				 cout << "--------------------------------------------------------------------" << endl;
-			     continue ;
+			cout << fOption << " is invalid Option , Please try again ! (Allowed from 1 to 3)" << endl;
+			cout << "--------------------------------------------------------------------" << endl;
+			continue;
 		}
 	}
 	while (true)
@@ -61,8 +61,10 @@ int main()
 		cout << "  5 --> Update line with another line." << endl;;
 		cout << "  6 --> Find lines contains a specific string." << endl;
 		cout << "  7 --> Replace a string with another one in all lines." << endl;
-		cout << "  8 --> Edit another Text File." << endl;
-		cout << "  9 --> Exit Mini Text Editor." << endl;
+		cout << "  8 --> Undo Changes." << endl;
+		cout << "  9 --> Redo Changes." << endl;
+		cout << "  10 --> Edit another Text File." << endl;
+		cout << "  11 --> Exit Mini Text Editor." << endl;
 		cout << endl;
 		cout << "Option ====> ";
 		int Option;
@@ -77,11 +79,13 @@ int main()
 		case(5): ULintro(f); DataSaving(myfile, directory, f); break;
 		case(6): FAintro(f); DataSaving(myfile, directory, f); break;
 		case(7): FARintro(f); DataSaving(myfile, directory, f); break;
-		case(8): DataSaving(myfile, directory, f); main();
-		case(9): DataSaving(myfile, directory, f); return 0;
-		default: DataSaving(myfile, directory, f); 
-			     cout << Option << "is Invalid Option , Please try again (Allowed from 1 to 9)" << endl;
-			     continue;
+		case(8): f.Undo(); DataSaving(myfile, directory, f); break;
+		case(9): f.Redo(); DataSaving(myfile, directory, f); break;
+		case(10): DataSaving(myfile, directory, f); main();
+		case(11): DataSaving(myfile, directory, f); return 0;
+		default: DataSaving(myfile, directory, f);
+			cout << Option << "is Invalid Option , Please try again (Allowed from 1 to 9)" << endl;
+			continue;
 		}
 		DataSaving(myfile, directory, f);
 		Showintro(f);
@@ -89,7 +93,7 @@ int main()
 	return 0;
 }
 //Definition of Helper Functions !!
-void ALintro(file &f)
+void ALintro(file& f)
 {
 	cout << "*_ Adding Line is Chosen _*" << endl;
 	cout << "Please Enter The line You want to Add !" << endl;
@@ -100,7 +104,7 @@ void ALintro(file &f)
 	f.AddLine(newline);
 }
 
-void ILintro(file &f)
+void ILintro(file& f)
 {
 	cout << "*_ Inserting Line is Chosen _*" << endl;
 	cout << "Please Enter The line You want to Insert !" << endl;
@@ -111,23 +115,33 @@ void ILintro(file &f)
 	cout << endl;
 	cout << "Please Enter The Row Num You want to Insert in !" << endl;
 	cout << "*Note : if you insert Row Num > " << f.GetSize() << " (Text Size) , Size will be expanded automatically*" << endl;
-	cout << "Row Num ==> ";
 	int j;
-	cin >> j;
+	while (true) {
+		cout << "Row Num ==> ";
+		cin >> j;
+		if (j <= 0) {
+			cout << "--------------------------------------------------------------------" << endl;
+			cout << "Invalid index , Minimum allowed is 1 !!" << endl;
+			cout << "--------------------------------------------------------------------" << endl;
+			continue;
+		}
+		else
+			break;
+	}
 	j = j - 1;
 	f.InsertLine(j, newline);
 }
 
-void DLintro(file &f)
+void DLintro(file& f)
 {
 	cout << "*_ Deleting Line is Chosen _*" << endl;
 	int j;
+	cout << "Please Enter The Row Num You want to delete ! (Allowed from 1 to " << f.GetSize();
+	cout << ")" << endl;
 	while (true) {
-		cout << "Please Enter The Row Num You want to delete ! (Allowed from 1 to " << f.GetSize();
-		cout << ")" << endl;
 		cout << "Row Num ==> ";
 		cin >> j;
-		if (!(CheckIndex(j, f))) 
+		if (!(CheckIndex(j, f)))
 		{
 			cout << "--------------------------------------------------------------------" << endl;
 			cout << "This Row doesn't Exist , please Try again !" << endl;
@@ -142,13 +156,13 @@ void DLintro(file &f)
 	f.DeleteLine(j);
 }
 
-void GLTintro(file &f)
+void GLTintro(file& f)
 {
 	cout << "*_ Getting Line is Chosen _*" << endl;
 	int j;
+	cout << "Please Enter The Row Num You want to Get ! (Allowed from 1 to " << f.GetSize();
+	cout << ")" << endl;
 	while (true) {
-		cout << "Please Enter The Row Num You want to Get ! (Allowed from 1 to " << f.GetSize();
-		cout << ")" << endl;
 		cout << "Row Num ==> ";
 		cin >> j;
 		if (!(CheckIndex(j, f)))
@@ -176,13 +190,14 @@ void GLTintro(file &f)
 		exit(0);
 }
 
-void ULintro(file &f)
+void ULintro(file& f)
 {
 	cout << "*_ Updating Line is Chosen _*" << endl;
 	int j;
+	cout << "Please Enter The Row Num You want to Update in ! (Allowed from 1 to " << f.GetSize();
+	cout << ")" << endl;
 	while (true) {
-		cout << "Please Enter The Row Num You want to Update in ! (Allowed from 1 to " << f.GetSize();
-		cout << ")" << endl;
+		cout << "Row Num ==> ";
 		cin >> j;
 		if (!(CheckIndex(j, f)))
 		{
@@ -204,15 +219,30 @@ void ULintro(file &f)
 	f.UpdateLine(j, newline);
 }
 
-void FAintro(file &f)
+void FAintro(file& f)
 {
 	cout << "*_ Find All lines is Chosen _*" << endl;
-	cout << "Enter a String You want to find lines Num !" << endl;
+	cout << "Enter a String You want to find lines Num : ";
 	string s;
-	cin >> s;
-	f.FindAll(s);
+	getline(cin, hh);
+	getline(cin, s);
+	deque<int> D = f.FindAll(s);
+	cout << "line/s contains word " << s << " is/are :" << endl;
+	cout << "   ";
+	for (int i = 0; i < D.size(); i++) 
+		cout << D[i] << ' ';
+	cout << endl;
+	cout << "--------------------------------------------------------------------" << endl;
+	cout << "Type (Y) To Continue ==> ";
+	cin >> hh;
+	if (hh == "Y" || hh == "y")
+	{
+	}
+	else
+		exit(0);
 }
-void FARintro(file &f)
+
+void FARintro(file& f)
 {
 	cout << "*_ Find and Replace is Chosen _*" << endl;
 	string newword;
@@ -228,7 +258,8 @@ void FARintro(file &f)
 		cout << "No Changes apllied as The two Strings are the same !" << endl;
 	}
 }
-void Showintro(file &f)
+
+void Showintro(file& f)
 {
 	cout << "--------------------------------------------------------------------" << endl;
 	cout << "- Display of your Current Text File : " << endl;
@@ -236,21 +267,24 @@ void Showintro(file &f)
 	f.Show();
 	cout << "--------------------------------------------------------------------" << endl;
 }
-bool CheckIndex(int i, file &f)
+
+bool CheckIndex(int i, file& f)
 {
-	if (i <= f.GetSize())
+	if (i > 0 && i <= f.GetSize())
 		return true;
 	else
 		return false;
 }
-void DataSaving(ofstream &myfile,string &directory,file &f) {
+
+void DataSaving(ofstream& myfile, string& directory, file& f) {
 	myfile.open(directory, ios::out);
 	for (int i = 0; i < f.GetSize(); i++) {
 		myfile << f.GetLineText(i) << endl;
 	}
 	myfile.close();
 }
-void Creating_New_Text_File_Interface(ofstream &myfile, string &directory, file &f)
+
+void Creating_New_Text_File_Interface(ofstream& myfile, string& directory, file& f)
 {
 	cout << "--------------------------------------------------------------------" << endl;
 	cout << "Please Name Your Text file : ";
@@ -268,7 +302,8 @@ void Creating_New_Text_File_Interface(ofstream &myfile, string &directory, file 
 	f.AddLine(s2);
 	Showintro(f);
 }
-void Reading_Existing_Text_File_Inteface(ofstream &myfile, string &directory, file &f) 
+
+void Reading_Existing_Text_File_Inteface(ofstream& myfile, string& directory, file& f)
 {
 	cout << "--------------------------------------------------------------------" << endl;
 	cout << "Please Enter Your Existing File Name : ";
@@ -276,15 +311,19 @@ void Reading_Existing_Text_File_Inteface(ofstream &myfile, string &directory, fi
 	string name;
 	getline(cin, name);
 	directory = "Data/" + name + ".txt";
+	// Openning The Saved File 
 	ifstream ifile(directory);
 	if (ifile.fail()) {
 		cout << "This File doesn't exist , Please Try again !" << endl;
 		Reading_Existing_Text_File_Inteface(myfile, directory, f);
 	}
-	myfile.open(directory,ios::app);
+	// Getting liness from The File into The Program 
 	string l;
 	while (getline(ifile, l)) {
 		f.AddLine(l);
 	}
+	ifile.close();
+	// Opening the ofstream file (To Save New Data After Editing)
+	myfile.open(directory, ios::app);
 	Showintro(f);
 }
