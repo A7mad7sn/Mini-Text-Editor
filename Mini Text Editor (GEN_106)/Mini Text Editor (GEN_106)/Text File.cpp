@@ -17,10 +17,10 @@ void file::AddLine(string l)
 void file::InsertLine(int i, string l)
 {
 	if (i == 1) {
-		lines.push_front(l);
+		lines.push_front(l); // O(1)
 	}
 	else if (i < lines.size()) {
-		lines.emplace(lines.begin() + i, l);
+		lines.emplace(lines.begin() + i, l); 
 	}
 	else {
 		lines.resize(i + 1, " ");

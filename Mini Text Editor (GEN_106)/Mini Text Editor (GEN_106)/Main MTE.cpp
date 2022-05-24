@@ -50,6 +50,7 @@ int main()
 			continue;
 		}
 	}
+	DataSaving(myfile, directory, f);
 	while (true)
 	{
 		cout << "Press : " << endl;
