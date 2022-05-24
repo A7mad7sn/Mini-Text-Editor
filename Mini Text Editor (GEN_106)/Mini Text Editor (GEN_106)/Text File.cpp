@@ -10,12 +10,13 @@ int file::GetSize()
 	return s;
 }
 
-
+//done + undo
 void file::AddLine(string l)
 { 
 	lines.push_back(l);
+    Undostk.push(lines);
 }
-
+//done + undo
 void file::InsertLine(int i, string l)
 {
 	if (i < lines.size())
@@ -24,13 +25,14 @@ void file::InsertLine(int i, string l)
 		lines.resize(i+1 , " ");
 		lines[i] = l;
 	}
+    Undostk.push(lines);
 }
 
 string file::GetLineText(int i)
 {
 	return lines[i];
 }
-
+//done + undo
 void file::DeleteLine(int i)
 {
 	vector<string>::iterator it;
@@ -55,11 +57,13 @@ void file::DeleteLine(int i)
 		cout << "Text File is empty";
 	}
 	cout << endl;
+    Undostk.push(lines);
 }
-
+//done + undo
 void file::UpdateLine(int i, string l)
 {
 	lines[i] = l;
+    Undostk.push(lines);
 }
 
 void file::FindAll(string s)
@@ -82,14 +86,18 @@ void file::FindAll(string s)
 		cout << endl;
 	}
 }
-
+//done + undo
 void file::Findandreplace(string s1, string s2)
 {
 	for (int i = 0; i < lines.size(); i++)
-		if ((lines[i].find(s2)) < lines[i].size()) {
-			int x1 = lines[i].find(s2), x2 = s2.size();
-			lines[i].replace(x1, x2, s1);
-		}
+        while((lines[i].find(s2)) < lines[i].size()){
+            if ((lines[i].find(s2)) < lines[i].size()) {
+                int x1 = lines[i].find(s2), x2 = s2.size();
+                lines[i].replace(x1, x2, s1);
+            }
+        }
+
+    Undostk.push(lines);
 }
 
 void file::Show()
@@ -98,6 +106,26 @@ void file::Show()
 	{
 		cout << "          " << lines.at(i) << endl;
 	}
+}
+
+
+void file :: Undo (){
+    if(!Undostk.empty()){
+        Redostk.push(Undostk.top());
+        Undostk.pop();
+    }
+
+
+}
+void file :: Redo(){
+    if(!Redostk.empty()) {
+        Undostk.push(Redostk.top());
+        Redostk.pop();
+    }
+}
+void file::Save(){
+    if(!Undostk.empty())
+        lines=Undostk.top();
 }
 
 

@@ -1,0 +1,3 @@
+C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/Mini_Text_Editor__GEN_106_.dir
+C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/rebuild_cache.dir
