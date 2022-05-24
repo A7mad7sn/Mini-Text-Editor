@@ -63,7 +63,7 @@ deque<int> file::FindAll(string s)
 void file::Findandreplace(string s1, string s2)
 {
 	for (int i = 0; i < lines.size(); i++)
-		if ((lines[i].find(s2)) < lines[i].size()) {
+		while ((lines[i].find(s2)) < lines[i].size()) {
 			int x1 = lines[i].find(s2), x2 = s2.size();
 			lines[i].replace(x1, x2, s1);
 		}
