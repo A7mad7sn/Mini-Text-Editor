@@ -227,11 +227,13 @@ void FAintro(file& f)
 	getline(cin, hh);
 	getline(cin, s);
 	deque<int> D = f.FindAll(s);
-	cout << "line/s contains word " << s << " is/are :" << endl;
-	cout << "   ";
-	for (int i = 0; i < D.size(); i++) 
-		cout << D[i] << ' ';
-	cout << endl;
+	if (D.empty() == false) {
+		cout << "line/s contains word " << s << " is/are :" << endl;
+		cout << "   ";
+		for (int i = 0; i < D.size(); i++)
+			cout << D[i] << ' ';
+		cout << endl;
+	}
 	cout << "--------------------------------------------------------------------" << endl;
 	cout << "Type (Y) To Continue ==> ";
 	cin >> hh;
