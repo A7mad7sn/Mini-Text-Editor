@@ -1,10 +1,13 @@
 #include <iostream>
 #include <string>
 #include <deque>
+#include <stack>
 
 using namespace std;
 class file{
 	deque<string> lines;
+	stack<deque<string>> Undostk;
+	stack<deque<string>> Redostk;
 public:
 	int GetSize();
 	void AddLine(string l);
@@ -17,5 +20,4 @@ public:
 	void Show();
 	void Undo();
 	void Redo();
-	
 };

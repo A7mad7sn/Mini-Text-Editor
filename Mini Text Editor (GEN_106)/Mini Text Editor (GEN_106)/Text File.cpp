@@ -12,6 +12,7 @@ int file::GetSize()
 void file::AddLine(string l)
 {
 	lines.push_back(l);
+	Undostk.push(lines);
 }
 
 void file::InsertLine(int i, string l)
@@ -26,6 +27,7 @@ void file::InsertLine(int i, string l)
 		lines.resize(i + 1, " ");
 		lines[i] = l;
 	}
+	Undostk.push(lines);
 }
 
 string file::GetLineText(int i)
@@ -36,11 +38,13 @@ string file::GetLineText(int i)
 void file::DeleteLine(int i)
 {
 	lines.erase(lines.begin() + i);
+	Undostk.push(lines);
 }
 
 void file::UpdateLine(int i, string l)
 {
 	lines[i] = l;
+	Undostk.push(lines);
 }
 
 deque<int> file::FindAll(string s)
@@ -67,22 +71,31 @@ void file::Findandreplace(string s1, string s2)
 			int x1 = lines[i].find(s2), x2 = s2.size();
 			lines[i].replace(x1, x2, s1);
 		}
+	Undostk.push(lines);
 }
 
-void file::Show()
-{
-	for (int i = 0; i < lines.size(); i++)
-	{
-		cout << "          " << lines.at(i) << endl;
+void file::Show() {
+
+	deque<string> D = Undostk.top();
+	if (D.empty())
+		cout << " " << endl;
+	else {
+		for (int i = 0; i < D.size(); i++) {
+			cout << (i + 1) << " : " << D[i] << endl;
+		}
 	}
 }
 
-void file::Undo()
-{
-
+void file::Undo() {
+	if (!Undostk.empty()) {
+		Redostk.push(Undostk.top());
+		Undostk.pop();
+	}
+	
 }
-
-void file::Redo()
-{
-
+void file::Redo() {
+	if (!Redostk.empty()) {
+		Undostk.push(Redostk.top());
+		Redostk.pop();
+	}
 }
