@@ -3,6 +3,7 @@
 
 //Globals :
 int Counter = 0;
+int c = 0;
 string hh;//hh is just an temp value to solve input case to avoid reading empty string !!
 //Declaration of Helper Functions !!
 void ALintro(file& f);
@@ -26,7 +27,6 @@ int main()
 	if (Counter == 0)
 	{
 		cout << "\t\t\t\t\t*****Welcome To Our Mini Text Editor*****" << endl;
-		Counter++;
 	}
 	bool Continuity = true;
 	while (Continuity) {
@@ -42,7 +42,7 @@ int main()
 		switch (fOption)
 		{
 		case(1): Creating_New_Text_File_Interface(myfile, directory, f); Continuity = false; break;
-		case(2): Reading_Existing_Text_File_Inteface(myfile, directory, f); Continuity = false; break;
+		case(2): c = 0; Reading_Existing_Text_File_Inteface(myfile, directory, f); Continuity = false; break;
 		case(3): return 0;
 		default: cout << "------------------------------------------------------------------------------------------------------------------------" << endl;
 			cout << fOption << " is invalid Option , Please try again ! (Allowed from 1 to 3)" << endl;
@@ -62,10 +62,17 @@ int main()
 		cout << "  5 --> Update line with another line." << endl;;
 		cout << "  6 --> Find lines contains a specific string." << endl;
 		cout << "  7 --> Replace a string with another one in all lines." << endl;
-		cout << "  8 --> Undo Changes." << endl;
-		cout << "  9 --> Redo Changes." << endl;
-		cout << "  10 --> Edit another Text File." << endl;
-		cout << "  11 --> Exit Mini Text Editor." << endl;
+		if (f.CheckReset())
+		{
+			cout << "  8 --> Edit another Text File." << endl;
+			cout << "  9 --> Exit Mini Text Editor." << endl;
+		}
+		else {
+			cout << "  8 --> Undo Changes." << endl;
+			cout << "  9 --> Redo Changes." << endl;
+			cout << "  10 --> Edit another Text File." << endl;
+			cout << "  11 --> Exit Mini Text Editor." << endl;
+		}
 		cout << endl;
 		cout << "Option ====> ";
 		int Option;
@@ -80,14 +87,28 @@ int main()
 		case(5): ULintro(f); DataSaving(myfile, directory, f); break;
 		case(6): FAintro(f); DataSaving(myfile, directory, f); break;
 		case(7): FARintro(f); DataSaving(myfile, directory, f); break;
-		case(8): f.Undo(); DataSaving(myfile, directory, f); break;
-		case(9): f.Redo(); DataSaving(myfile, directory, f); break;
-		case(10): DataSaving(myfile, directory, f); main();
-		case(11): DataSaving(myfile, directory, f); return 0;
+		case(8): if (f.CheckReset()) { DataSaving(myfile, directory, f); Counter++; main(); }
+			   else {f.Undo(); DataSaving(myfile, directory, f); break;}
+			   break;
+		case(9): if (f.CheckReset()) { DataSaving(myfile, directory, f); return 0; }
+			   else { f.Redo(); DataSaving(myfile, directory, f); break; }
+			   break;
+		case(10): if (f.CheckReset()) {
+				  DataSaving(myfile, directory, f);
+				  cout << Option << "is Invalid Option , Please try again (Allowed from 1 to 9)" << endl;
+				  }
+				else { DataSaving(myfile, directory, f); Counter++; main(); }
+				break;
+		case(11):if (f.CheckReset()) {
+				DataSaving(myfile, directory, f);
+				cout << Option << "is Invalid Option , Please try again (Allowed from 1 to 9)" << endl;
+				}
+				else { DataSaving(myfile, directory, f); return 0; }
 		default: DataSaving(myfile, directory, f);
-			cout << Option << "is Invalid Option , Please try again (Allowed from 1 to 9)" << endl;
+			cout << Option << "is Invalid Option , Please try again (Allowed from 1 to 11)" << endl;
 			continue;
 		}
+		Counter++;
 		DataSaving(myfile, directory, f);
 		Showintro(f);
 	}
@@ -280,6 +301,7 @@ bool CheckIndex(int i, file& f)
 }
 
 void DataSaving(ofstream& myfile, string& directory, file& f) {
+	f.Save();
 	myfile.open(directory, ios::out);
 	for (int i = 0; i < f.GetSize(); i++) {
 		myfile << f.GetLineText(i) << endl;
@@ -310,7 +332,10 @@ void Reading_Existing_Text_File_Inteface(ofstream& myfile, string& directory, fi
 {
 	cout << "------------------------------------------------------------------------------------------------------------------------" << endl;
 	cout << "Please Enter Your Existing File Name : ";
-	getline(cin, hh);
+	if (c == 0) {
+		getline(cin, hh);
+		c++;
+	}
 	string name;
 	getline(cin, name);
 	directory = "Data/" + name + ".txt";
@@ -322,11 +347,14 @@ void Reading_Existing_Text_File_Inteface(ofstream& myfile, string& directory, fi
 	}
 	// Getting liness from The File into The Program 
 	string l;
+	deque<string> D;
 	while (getline(ifile, l)) {
-		f.AddLine(l);
+		D.push_back(l);
 	}
+	f.GetTheText(D);
 	ifile.close();
 	// Opening the ofstream file (To Save New Data After Editing)
 	myfile.open(directory, ios::app);
 	Showintro(f);
+	Counter = 0;
 }

@@ -17,10 +17,10 @@ void file::AddLine(string l)
 
 void file::InsertLine(int i, string l)
 {
-	if (i == 1) {
+	if (i == 0) {
 		lines.push_front(l); // O(1)
 	}
-	else if (i < lines.size()) {
+	else if (i < lines.size() ) {
 		lines.emplace(lines.begin() + i, l); 
 	}
 	else {
@@ -91,6 +91,7 @@ void file::Undo() {
 		Redostk.push(Undostk.top());
 		Undostk.pop();
 	}
+	else{}
 	
 }
 void file::Redo() {
@@ -99,3 +100,25 @@ void file::Redo() {
 		Redostk.pop();
 	}
 }
+
+void file::Save() {
+	if (!Undostk.empty())
+		lines = Undostk.top();
+}
+
+void file::GetTheText(deque<string> D)
+{
+	lines = D;
+	standard = D;
+	Undostk.push(lines);
+}
+
+bool file::CheckReset()
+{
+	if (lines == standard)
+		return true;
+	else
+		return false;
+}
+
+

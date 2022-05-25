@@ -8,6 +8,7 @@ class file{
 	deque<string> lines;
 	stack<deque<string>> Undostk;
 	stack<deque<string>> Redostk;
+	deque<string> standard;
 public:
 	int GetSize();
 	void AddLine(string l);
@@ -20,4 +21,7 @@ public:
 	void Show();
 	void Undo();
 	void Redo();
+	void Save();
+	void GetTheText(deque<string> D);
+	bool CheckReset();
 };
