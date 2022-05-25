@@ -1,0 +1,3 @@
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Mini_Text_Editor__GEN_106_.dir/objects.a
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\ar.exe" qc CMakeFiles\Mini_Text_Editor__GEN_106_.dir/objects.a @CMakeFiles\Mini_Text_Editor__GEN_106_.dir\objects1.rsp
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe" -g -Wl,--whole-archive CMakeFiles\Mini_Text_Editor__GEN_106_.dir/objects.a -Wl,--no-whole-archive -o Mini_Text_Editor__GEN_106_.exe -Wl,--out-implib,libMini_Text_Editor__GEN_106_.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Mini_Text_Editor__GEN_106_.dir\linklibs.rsp

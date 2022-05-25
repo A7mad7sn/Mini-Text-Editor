@@ -28,7 +28,10 @@ The CXX compiler identification is GNU, found in "C:/Users/ahmed/Documents/GitHu
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/ninja/win/ninja.exe cmTC_0d029 && [1/2] Building C object CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj
+Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_cbb3a/fast && D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_cbb3a.dir\build.make CMakeFiles/cmTC_cbb3a.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cbb3a.dir/CMakeCCompilerABI.c.obj
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe"   -v -o CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj -c "D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c"
 Using built-in specs.
 COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe
 Target: x86_64-w64-mingw32
@@ -36,8 +39,8 @@ Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d029.dir/'
- D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_0d029.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccM462qi.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_cbb3a.dir\'
+ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_cbb3a.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccxbET4o.s
 GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -58,13 +61,17 @@ GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 23424b72d090e8b977a96775bde79257
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d029.dir/'
- as -v -o CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj C:\Users\ahmed\AppData\Local\Temp\ccM462qi.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_cbb3a.dir\'
+ as -v -o CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj C:\Users\ahmed\AppData\Local\Temp\ccxbET4o.s
 GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
 COMPILER_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;/mingw/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../;/mingw/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.'
-[2/2] Linking C executable cmTC_0d029.exe
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.'
+Linking C executable cmTC_cbb3a.exe
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_cbb3a.dir\link.txt --verbose=1
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_cbb3a.dir/objects.a
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_cbb3a.dir/objects.a @CMakeFiles\cmTC_cbb3a.dir\objects1.rsp
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe"  -v -Wl,--whole-archive CMakeFiles\cmTC_cbb3a.dir/objects.a -Wl,--no-whole-archive -o cmTC_cbb3a.exe -Wl,--out-implib,libcmTC_cbb3a.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe
 COLLECT_LTO_WRAPPER=D:/C\ drive/Program\ Files1/JetBrains/CLion\ 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -75,9 +82,10 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
 COMPILER_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;/mingw/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../;/mingw/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d029.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d029.'
- D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_0d029.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0d029.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d029.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d029.'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cbb3a.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cbb3a.'
+ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_cbb3a.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib --whole-archive CMakeFiles\cmTC_cbb3a.dir/objects.a --no-whole-archive --out-implib libcmTC_cbb3a.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cbb3a.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cbb3a.'
+mingw32-make[1]: Leaving directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 
@@ -102,7 +110,10 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/ninja/win/ninja.exe cmTC_0d029 && [1/2] Building C object CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj]
+  ignore line: [Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_cbb3a/fast && D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_cbb3a.dir\build.make CMakeFiles/cmTC_cbb3a.dir/build]
+  ignore line: [mingw32-make[1]: Entering directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_cbb3a.dir/CMakeCCompilerABI.c.obj]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe"   -v -o CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj -c "D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c"]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe]
   ignore line: [Target: x86_64-w64-mingw32]
@@ -110,8 +121,8 @@ Parsed C implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d029.dir/']
-  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_0d029.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccM462qi.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_cbb3a.dir\']
+  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles\cmTC_cbb3a.dir\ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccxbET4o.s]
   ignore line: [GNU C17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -132,8 +143,8 @@ Parsed C implicit link information from above output:
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 23424b72d090e8b977a96775bde79257]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d029.dir/']
-  ignore line: [ as -v -o CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj C:\Users\ahmed\AppData\Local\Temp\ccM462qi.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_cbb3a.dir\']
+  ignore line: [ as -v -o CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj C:\Users\ahmed\AppData\Local\Temp\ccxbET4o.s]
   ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
   ignore line: [COMPILER_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/]
@@ -145,8 +156,12 @@ Parsed C implicit link information from above output:
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
   ignore line: [/mingw/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.']
-  ignore line: [[2/2] Linking C executable cmTC_0d029.exe]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_cbb3a.dir\CMakeCCompilerABI.c.']
+  ignore line: [Linking C executable cmTC_cbb3a.exe]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_cbb3a.dir\link.txt --verbose=1]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_cbb3a.dir/objects.a]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_cbb3a.dir/objects.a @CMakeFiles\cmTC_cbb3a.dir\objects1.rsp]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe"  -v -Wl --whole-archive CMakeFiles\cmTC_cbb3a.dir/objects.a -Wl --no-whole-archive -o cmTC_cbb3a.exe -Wl --out-implib libcmTC_cbb3a.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\gcc.exe]
   ignore line: [COLLECT_LTO_WRAPPER=D:/C\ drive/Program\ Files1/JetBrains/CLion\ 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -165,9 +180,10 @@ Parsed C implicit link information from above output:
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
   ignore line: [/mingw/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d029.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d029.']
-  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_0d029.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib CMakeFiles/cmTC_0d029.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_0d029.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0d029.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_0d029.']
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cbb3a.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cbb3a.']
+  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_cbb3a.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib --whole-archive CMakeFiles\cmTC_cbb3a.dir/objects.a --no-whole-archive --out-implib libcmTC_cbb3a.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_cbb3a.exe' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_cbb3a.']
+  ignore line: [mingw32-make[1]: Leaving directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp']
   ignore line: []
   ignore line: []
   implicit libs: []
@@ -179,7 +195,10 @@ Parsed C implicit link information from above output:
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/ninja/win/ninja.exe cmTC_dbb22 && [1/2] Building CXX object CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj
+Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_83b26/fast && D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_83b26.dir\build.make CMakeFiles/cmTC_83b26.dir/build
+mingw32-make[1]: Entering directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_83b26.dir/CMakeCXXCompilerABI.cpp.obj
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe"   -v -o CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj -c "D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"
 Using built-in specs.
 COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe
 Target: x86_64-w64-mingw32
@@ -187,8 +206,8 @@ Configured with: ../gcc-11.2.0/configure --host=x86_64-w64-mingw32 --target=x86_
 Thread model: posix
 Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbb22.dir/'
- D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_dbb22.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccVsouz7.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_83b26.dir\'
+ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\cmTC_83b26.dir\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccixpP92.s
 GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -215,13 +234,17 @@ GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)
 	compiled by GNU C version 11.2.0, GMP version 6.2.1, MPFR version 4.1.0, MPC version 1.2.1, isl version none
 GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbb22.dir/'
- as -v -o CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\ahmed\AppData\Local\Temp\ccVsouz7.s
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_83b26.dir\'
+ as -v -o CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\ahmed\AppData\Local\Temp\ccixpP92.s
 GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37
 COMPILER_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;/mingw/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../;/mingw/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.'
-[2/2] Linking CXX executable cmTC_dbb22.exe
+COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.'
+Linking CXX executable cmTC_83b26.exe
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_83b26.dir\link.txt --verbose=1
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_83b26.dir/objects.a
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_83b26.dir/objects.a @CMakeFiles\cmTC_83b26.dir\objects1.rsp
+"D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe"  -v -Wl,--whole-archive CMakeFiles\cmTC_83b26.dir/objects.a -Wl,--no-whole-archive -o cmTC_83b26.exe -Wl,--out-implib,libcmTC_83b26.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
 Using built-in specs.
 COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe
 COLLECT_LTO_WRAPPER=D:/C\ drive/Program\ Files1/JetBrains/CLion\ 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe
@@ -232,9 +255,10 @@ Supported LTO compression algorithms: zlib
 gcc version 11.2.0 (GCC) 
 COMPILER_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/
 LIBRARY_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib/;/mingw/lib/../lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/;D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../;/mingw/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbb22.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbb22.'
- D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_dbb22.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_dbb22.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbb22.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbb22.'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83b26.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_83b26.'
+ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_83b26.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib --whole-archive CMakeFiles\cmTC_83b26.dir/objects.a --no-whole-archive --out-implib libcmTC_83b26.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83b26.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_83b26.'
+mingw32-make[1]: Leaving directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 
@@ -265,7 +289,10 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/ninja/win/ninja.exe cmTC_dbb22 && [1/2] Building CXX object CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: [Run Build Command(s):D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe -f Makefile cmTC_83b26/fast && D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/mingw32-make.exe  -f CMakeFiles\cmTC_83b26.dir\build.make CMakeFiles/cmTC_83b26.dir/build]
+  ignore line: [mingw32-make[1]: Entering directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building CXX object CMakeFiles/cmTC_83b26.dir/CMakeCXXCompilerABI.cpp.obj]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe"   -v -o CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj -c "D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp"]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe]
   ignore line: [Target: x86_64-w64-mingw32]
@@ -273,8 +300,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [Thread model: posix]
   ignore line: [Supported LTO compression algorithms: zlib]
   ignore line: [gcc version 11.2.0 (GCC) ]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbb22.dir/']
-  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/cmake/win/share/cmake-3.21/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_dbb22.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccVsouz7.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_83b26.dir\']
+  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/cc1plus.exe -quiet -v -iprefix D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/ -D_REENTRANT D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\share\cmake-3.21\Modules\CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles\cmTC_83b26.dir\ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64 -version -o C:\Users\ahmed\AppData\Local\Temp\ccixpP92.s]
   ignore line: [GNU C++17 (GCC) version 11.2.0 (x86_64-w64-mingw32)]
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -301,8 +328,8 @@ Parsed CXX implicit link information from above output:
   ignore line: [	compiled by GNU C version 11.2.0  GMP version 6.2.1  MPFR version 4.1.0  MPC version 1.2.1  isl version none]
   ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
   ignore line: [Compiler executable checksum: 916242a6eadede3a42d72bc0142b939f]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbb22.dir/']
-  ignore line: [ as -v -o CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj C:\Users\ahmed\AppData\Local\Temp\ccVsouz7.s]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_83b26.dir\']
+  ignore line: [ as -v -o CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj C:\Users\ahmed\AppData\Local\Temp\ccixpP92.s]
   ignore line: [GNU assembler version 2.37 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.37]
   ignore line: [COMPILER_PATH=D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/]
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/]
@@ -314,8 +341,12 @@ Parsed CXX implicit link information from above output:
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
   ignore line: [/mingw/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.']
-  ignore line: [[2/2] Linking CXX executable cmTC_dbb22.exe]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'CMakeFiles\cmTC_83b26.dir\CMakeCXXCompilerABI.cpp.']
+  ignore line: [Linking CXX executable cmTC_83b26.exe]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_83b26.dir\link.txt --verbose=1]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_83b26.dir/objects.a]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\ar.exe" qc CMakeFiles\cmTC_83b26.dir/objects.a @CMakeFiles\cmTC_83b26.dir\objects1.rsp]
+  ignore line: ["D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe"  -v -Wl --whole-archive CMakeFiles\cmTC_83b26.dir/objects.a -Wl --no-whole-archive -o cmTC_83b26.exe -Wl --out-implib libcmTC_83b26.dll.a -Wl --major-image-version 0 --minor-image-version 0 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=D:\C drive\Program Files1\JetBrains\CLion 2021.3.4\bin\mingw\bin\g++.exe]
   ignore line: [COLLECT_LTO_WRAPPER=D:/C\ drive/Program\ Files1/JetBrains/CLion\ 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/lto-wrapper.exe]
@@ -334,9 +365,10 @@ Parsed CXX implicit link information from above output:
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/]
   ignore line: [D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../]
   ignore line: [/mingw/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbb22.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbb22.']
-  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_dbb22.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib CMakeFiles/cmTC_dbb22.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_dbb22.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_dbb22.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_dbb22.']
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83b26.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_83b26.']
+  ignore line: [ D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/11.2.0/collect2.exe -m i386pep -Bdynamic -o cmTC_83b26.exe D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtbegin.o -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0 -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../lib -L/mingw/lib/../lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib -LD:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../.. -L/mingw/lib --whole-archive CMakeFiles\cmTC_83b26.dir/objects.a --no-whole-archive --out-implib libcmTC_83b26.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o D:/C drive/Program Files1/JetBrains/CLion 2021.3.4/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/11.2.0/crtend.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_83b26.exe' '-shared-libgcc' '-mtune=generic' '-march=x86-64' '-dumpdir' 'cmTC_83b26.']
+  ignore line: [mingw32-make[1]: Leaving directory 'C:/Users/ahmed/Documents/GitHub/Mini-Text-Editor-GEN_106-/Mini Text Editor (GEN_106)/Mini Text Editor (GEN_106)/cmake-build-debug/CMakeFiles/CMakeTmp']
   ignore line: []
   ignore line: []
   implicit libs: []
