@@ -1,0 +1,49 @@
+We Implemented InsertLine Function with deque STL 
+and it is its body :
+
+void file::InsertLine(int i, string l)
+{
+	if (i == 0) {
+		lines.push_front(l); // O(1)
+	}
+	else if (i < lines.size()) {
+		lines.emplace(lines.begin() + i, l);
+	}
+	else {
+		lines.resize(i + 1, " ");
+		lines[i] = l;
+	}
+	Undostk.push(lines);
+}
+since
+-lines as an object of deque<string> !
+
+it worked perfectely but it has complexity of O(n)
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+So We implemented another function with list STL and showed it for Our TA
+and it is its body : 
+
+void TextFile::InsertLine(int i, string l)
+{
+	list<string>::iterator it = lines.begin();      //(random access iterator) make the iterator points to the first element position
+	assert(i > 0);
+
+	if (i < lines.size()) {                          //if position entered is smaller than size    
+		advance(it, i - 1);                         //make the iterator points on the position wanted to be inseted in
+		lines.insert(it, 1, l);                   // ( position  , number of elements to be inserted , element to be inserted)  
+													 //   O(1) as the first parameter is the adress inwhich the new element will be inserted)
+													 //   if index was put instead of the it it would be O(N)
+	}
+
+
+	else {                     //if position entered is larger than size
+		advance(it, lines.size());
+		lines.insert(it, 1, l);
+
+	}
+}
+
+since 
+-lines is an object of list<string> !
+
+it has complexity of O(1) but the total project was uncompleted ( yet undo and redo ) as we fully implemented using deque !
