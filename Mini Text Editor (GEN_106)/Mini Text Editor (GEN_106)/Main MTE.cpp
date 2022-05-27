@@ -3,6 +3,7 @@
 
 //Globals :
 int Counter = 0;
+int rcounter = 0;
 int c = 0;
 string hh;//hh is just an temp value to solve input case to avoid reading empty string !!
 //Declaration of Helper Functions !!
@@ -37,14 +38,23 @@ int main()
 		cout << "  3 --> Exit Mini Text Editor." << endl;
 		cout << endl;
 		cout << "Option ==> ";
-		int fOption;
+		string fOption;
 		cin >> fOption;
-		switch (fOption)
+		if (fOption == "1")
 		{
-		case(1): Creating_New_Text_File_Interface(myfile, directory, f); Continuity = false; break;
-		case(2): c = 0; Reading_Existing_Text_File_Inteface(myfile, directory, f); Continuity = false; break;
-		case(3): return 0;
-		default: cout << "------------------------------------------------------------------------------------------------------------------------" << endl;
+			Creating_New_Text_File_Interface(myfile, directory, f); Continuity = false; break;
+
+		}
+		else if (fOption == "2") {
+			rcounter = 0;
+			c = 0;
+			Reading_Existing_Text_File_Inteface(myfile, directory, f); Continuity = false; break;
+
+		}
+		else if (fOption == "3") {
+			return 0;
+		}
+		else {
 			cout << fOption << " is invalid Option , Please try again ! (Allowed from 1 to 3)" << endl;
 			cout << "------------------------------------------------------------------------------------------------------------------------" << endl;
 			continue;
@@ -77,6 +87,11 @@ int main()
 		cout << "Option ====> ";
 		int Option;
 		cin >> Option;
+		while (Option < 1 || Option > 12)
+		{
+			cout << "Error ------- enter another num" << endl;
+			cin >> Option;
+		}
 		cout << "------------------------------------------------------------------------------------------------------------------------" << endl;
 		switch (Option)
 		{
@@ -355,6 +370,9 @@ void Reading_Existing_Text_File_Inteface(ofstream& myfile, string& directory, fi
 	ifile.close();
 	// Opening the ofstream file (To Save New Data After Editing)
 	myfile.open(directory, ios::app);
-	Showintro(f);
+	if (rcounter == 0) {
+		Showintro(f);
+		rcounter++;
+	}
 	Counter = 0;
 }
