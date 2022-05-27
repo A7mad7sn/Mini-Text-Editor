@@ -1,0 +1,4 @@
+C:\Users\HP Zbook\Desktop\GUI\GUI\x64\Debug\GUI.vcxproj.AssemblyReference.cache
+C:\Users\HP Zbook\Desktop\GUI\GUI\x64\Debug\GUI.vcxproj.SuggestedBindingRedirects.cache
+C:\Users\HP Zbook\Desktop\GUI\GUI\x64\Debug\GUI.MyForm.resources
+C:\Users\HP Zbook\Desktop\GUI\GUI\x64\Debug\GUI.vcxproj.GenerateResource.cache

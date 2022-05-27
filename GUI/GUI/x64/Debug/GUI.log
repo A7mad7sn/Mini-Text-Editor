@@ -1,0 +1,5 @@
+﻿  MyForm.cpp
+C:\Users\HP Zbook\Desktop\GUI\GUI\MyForm.cpp(6,1): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+C:\Users\HP Zbook\Desktop\GUI\GUI\MyForm.cpp(8,15): warning C4551: function call missing argument list
+  MyForm.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  GUI.vcxproj -> C:\Users\HP Zbook\Desktop\GUI\x64\Debug\GUI.exe
